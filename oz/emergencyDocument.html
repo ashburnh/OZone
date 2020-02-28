@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+
+  <head>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <title>OZ Emergency Document</title>
+    <link rel = "stylesheet" href = "styles\main.css">
+  </head>
+
+  <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-analytics.js"></script>
+
+  <body id="all_page" class="loggedin-div">
+    <header>
+      <button class="logout-button" onclick="logout()">Logout</button>
+      <nav>
+        <h1> Navigation </h1>
+        <ul>
+          <li><a href = "realIndex.html"> Home </a></li>
+          <li><a href="roster.html"> Roster </a></li>
+          <li><a href = "roles.html"> Roles </a></li>
+          <li><a href = "classes.html"> Classes </a></li>
+          <li><a href = "lineage.html"> Lineage </a></li>
+          <li><a href = "forums.html"> Forums </a></li>
+          <li><a href = "calendar.html"> Calendar </a></li>
+          <li><a href = "bylaws.html"> Bylaws </a></li>
+          <li class="current-page"> Emegency Document </li>
+          <li><a href = "resources.html"> Resources </a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class = "calendar">
+    <iframe src="https://docs.google.com/document/d/e/2PACX-1vQ2RbE449v5cKV274PHfDBwwldZEKRTetC4jDzbV0JqiUdDbzOvuCo1tsyKg57hbUSAeLc9vRBBGxXG/pub?embedded=true" width = 91.4% height = 900px></iframe>
+    </div>
+
+    <script src = "javascript\checkAuth.js"></script>
+
+  </body>
+
+
+</html>

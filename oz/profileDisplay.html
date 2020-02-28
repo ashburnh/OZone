@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+
+  <head>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <title id = "pledgeName"> </title>
+    <link rel = "stylesheet" href = "styles\main.css">
+    <link rel = "stylesheet" href = "styles\profileDisplay.css">
+  </head>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-analytics.js"></script>
+
+  <body id="all_page" class="loggedin-div">
+    <header>
+      <button class="logout-button" onclick="logout()">Logout</button>
+      <nav>
+        <h1> Navigation </h1>
+        <ul>
+          <li><a href="realIndex.html"> Home </a></li>
+          <li><a href="roster.html"> Roster </a></li>
+          <li><a href = "roles.html"> Roles <a/></li>
+          <li><a href = "classes.html"> Classes </a></li>
+          <li><a href = "lineage.html"> Lineage <a/></li>
+          <li><a href = "forums.html"> Forums <a/></li>
+          <li><a href = "calendar.html"> Calendar </a></li>
+          <li><a href = "bylaws.html"> Bylaws </a></li>
+          <li><a href = "emergencyDocument.html"> Emergency Document </a></li>
+          <li><a href = "resources.html"> Resources </a></li>
+        </ul>
+      </nav>
+    </header>
+
+  <script>
+  var queryString = decodeURIComponent(window.location.search);
+  queryString = queryString.substring(8);
+
+  document.addEventListener("DOMContentLoaded", event => {
+
+    const app = firebase.app();
+
+    const userDB = firebase.database().ref("users/" + queryString);
+
+    var realName = userDB.child('name');
+    var position = userDB.child('position');
+    var pClass = userDB.child('class');
+    var pledgeName = userDB.child("pledgeName");
+    var major = userDB.child("major");
+    var minor = userDB.child("minor");
+    var grade = userDB.child("grade");
+    var big = userDB.child("big");
+    var littles = userDB.child("littles");
+    var expectedGraduation = userDB.child("expectedGraduation");
+    var funFact = userDB.child("funFact");
+    var specialFact = userDB.child("specialFact");
+
+
+    realName.once("value")
+        .then(function(snapshot) {
+          document.getElementById("rosterName").innerHTML = snapshot.val();
+        });
+    position.once("value")
+        .then(function(snapshot){
+          document.getElementById("rosterPosition").innerHTML = snapshot.val();
+        });
+    pClass.once("value").then(function(snapshot){
+      document.getElementById("pledgeClass").innerHTML = snapshot.val();
+    });
+    pledgeName.once("value").then(function(snapshot){
+      document.getElementById("pledgeName").innerHTML = snapshot.val();
+    });
+    major.once("value").then(function(snapshot){
+      document.getElementById("major").innerHTML = snapshot.val();
+    });
+    minor.once("value").then(function(snapshot){
+      document.getElementById("minor").innerHTML = snapshot.val();
+    });
+    grade.once("value").then(function(snapshot){
+      document.getElementById("grade").innerHTML = snapshot.val();
+    });
+    big.once("value").then(function(snapshot){
+      document.getElementById("big").innerHTML = snapshot.val();
+    });
+    littles.once("value").then(function(snapshot){
+      document.getElementById("littles").innerHTML = snapshot.val();
+    });
+    expectedGraduation.once("value").then(function(snapshot){
+      document.getElementById("expectedGraduation").innerHTML = snapshot.val();
+    });
+    funFact.once("value").then(function(snapshot){
+      document.getElementById("funFact").innerHTML = snapshot.val();
+    });
+    specialFact.once("value").then(function(snapshot){
+      document.getElementById("specialFact").innerHTML = snapshot.val();
+    });
+
+  })
+
+  </script>
+
+    <div class = "memberPage">
+      <picture>
+        <img src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/69646522_2143864469239402_825410349703364608_n.jpg?_nc_cat=110&_nc_oc=AQkpSw85D_mIdj6eySpM6DKIswlt5zHqXsj1Jr9n85pemCe5cCx67363kloy_gc931U&_nc_ht=scontent-lga3-1.xx&oh=120260c80c425535440d6699b37b2dda&oe=5E26D04F" alt = "Armando Alvarez" width = 300px height = 300px>
+      </picture>
+      <h2 class = "noMargin"><p style ="display:inline" id = "rosterName"></p></h2>
+      <ul class = "noMargin">
+        <li> Major: <p style ="display:inline" id ='major'></p></li>
+        <li> Minor: <p style ="display:inline" id ='minor'></p></li>
+        <li> Grade: <p style ="display:inline" id ='grade'></p></li>
+        <li> Expected Graduation Year: <p style ="display:inline" id ='expectedGraduation'></p></li>
+        <li> Position: <p style ="display:inline" id ='rosterPosition'></p></li>
+        <li> Brother Name: <p style ="display:inline" id ='pledgeName'></li>
+        <li> Class: <p style ="display:inline" id ='pledgeClass'></p></li>
+        <li> Big: <p style ="display:inline" id ='big'></p></li>
+        <li> Little(s): <p style ="display:inline" id ='littles'></p></li>
+        <li> Fun Fact: <p style ="display:inline" id ='funFact'></p></li>
+        <li> <p style ="display:inline" id ='specialFact'></p></li>
+      </ul>
+    </div>
+    <script src = "javascript\checkAuth.js"></script>
+  </body>
+
+
+</html>
