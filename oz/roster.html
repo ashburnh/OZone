@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <title>OZ Roster</title>
+    <link rel = "stylesheet" href = "styles\main.css">
+  </head>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-analytics.js"></script>
+
+  <body id="all_page" class="loggedin-div">
+    <header>
+      <button class="logout-button" onclick="logout()">Logout</button>
+      <nav>
+        <h1> Navigation </h1>
+        <ul>
+          <li><a href="realIndex.html"> Home </a></li>
+          <li class="current-page"> Roster </li>
+          <li><a href = "roles.html"> Roles </a></li>
+          <li><a href = "classes.html"> Classes </a></li>
+          <li><a href = "lineage.html"> Lineage </a></li>
+          <li><a href = "forums.html"> Forums </a></li>
+          <li><a href = "calendar.html"> Calendar </a></li>
+          <li><a href = "bylaws.html"> Bylaws </a></li>
+          <li><a href = "emergencyDocument.html"> Emegency Document </a></li>
+          <li><a href = "resources.html"> Resources </a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <h2> Roster </h2>
+    <ul>
+      <li><button onclick ="rosterVar('showersWithDad')"> Armando Alvarez </button> - <a href = "roles\president.html"> President </a></li>
+      <li><button onclick ="rosterVar('fartNoises')"> Cemal Kutay Koman </button> - General Member </li>
+      <li><a href = "roster\nathan_faynzilberg.html"> Nathan Faynzilberg </a> - <a href = "roles\vicePresident.html"> Vice President </a></li>
+      <li><button onclick ="rosterVar('shitsmear')"> Ashburn Hu </button> - General Member </li>
+      <li><button onclick ="rosterVar('sweatstain')"> Tom Fergus </button> - Brother of the House </li>
+    </ul>
+
+    <script src = "javascript\checkAuth.js"></script>
+    <script>
+      function rosterVar(selected){
+      var selectedPerson=selected;
+
+      var queryString = "?person=" + selectedPerson;
+      window.location.href = "profileDisplay.html" + queryString;
+    }
+    </script>
+  </body>
+
+
+
+</html>

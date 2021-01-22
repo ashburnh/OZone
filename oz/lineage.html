@@ -1,0 +1,318 @@
+<!doctype html>
+<html>
+
+  <head>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <title>OZ Lineages</title>
+    <link rel = "stylesheet" href = "styles\main.css">
+    <link rel = "stylesheet" href = "styles\lineage.css">
+  </head>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<!-- Add Firebase products that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-analytics.js"></script>
+
+  <body id="all_page" class="loggedin-div">
+    <header>
+      <button class="logout-button" onclick="logout()">Logout</button>
+      <nav>
+        <h1> Navigation </h1>
+        <ul>
+          <li><a href = "realIndex.html"> Home </a></li>
+          <li><a href="roster.html"> Roster </a></li>
+          <li><a href = "roles.html"> Roles </a></li>
+          <li><a href = "classes.html"> Classes </a></li>
+          <li class="current-page"> Lineage </li>
+          <li><a href = "forums.html"> Forums </a></li>
+          <li><a href = "calendar.html"> Calendar </a></li>
+          <li><a href = "bylaws.html"> Bylaws </a></li>
+          <li><a href = "emergencyDocument.html"> Emegency Document </a></li>
+          <li><a href = "resources.html"> Resources </a></li>
+        </ul>
+      </nav>
+    </header>
+  </body>
+<div>
+  <div class = "lineage">
+  <span class="tree">
+  	<ul>
+  		<li>
+  			<a href="#">Eric Bettencourt<br/>Founding Father</a>
+  			<ul>
+  				<li>
+  					<a href="#">Dylan Chen<br/>Gamma Class</a>
+  					<ul>
+  						<li>
+  							<a href="#">Austin Huang<br/>Epsilon Class</a>
+                <ul>
+                  <li>
+                    <a href="#">Kevyn Martins<br/>Eta Class</a>
+                    <ul>
+                      <li>
+                        <a href="#">Moises Loriente<br/>Theta Class</a>
+                        <ul>
+                          <li>
+                            <a href="#">Robert Steger<br/>Iota Class</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+  						</li>
+  					</ul>
+  				</li>
+  				<li>
+  					<a href="#">Mayank Ganeson<br/>Alpha Class</a>
+  					<ul>
+  						<li>
+                <a href="#">Will Anderson<br/>Delta Class</a>
+                <ul>
+                  <li>
+                    <a href="#">James Persons<br/>Eta Class</a>
+                  </li>
+                  <li>
+                    <a href="#">Isaac Schorr<br/>Zeta Class</a>
+                    <ul>
+                      <li>
+                        <a href="#">Cemal Koman<br/>Theta Class</a>
+                      </li>
+                      <li>
+                        <a href="#">Krishan Eskew<br/>Iota Class</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+  					</ul>
+  				</li>
+  			</ul>
+  		</li>
+  	</ul>
+  </span>
+
+  <span class="tree">
+  	<ul>
+  		<li>
+  			<a href="#">Mike Oldcorn<br/>Founding Father</a>
+  			<ul>
+  				<li>
+  					<a href="#">Ryan King<br/>Alpha Class</a>
+  					<ul>
+  						<li>
+  							<a href="#">Alex Sigman<br/>Beta Class</a>
+                <ul>
+                  <li>
+                    <a href="#">Brian Bartoszek<br/>Epsilon Class</a>
+                    <ul>
+                      <li>
+                        <a href="#">Thad Reichard<br/>Theta Class</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+  						</li>
+  					</ul>
+  				</li>
+  			</ul>
+  		</li>
+  	</ul>
+  </span>
+
+  <span class="tree">
+  	<ul>
+  		<li>
+  			<a href="#">Jonah Dustar<br/>Founding Father</a>
+  			<ul>
+  				<li>
+  					<a href="#">Joey Kapp<br/>Beta Class</a>
+  					<ul>
+  						<li>
+  							<a href="#">Felix Litvak<br/>Eta Class</a>
+                <ul>
+                  <li>
+                    <a href="#">Matt Gibson<br/>Theta Class</a>
+                  </li>
+                  <li>
+                    <a href="#">Joey Pauletto<br/>Iota Class</a>
+                  </li>
+                </ul>
+  						</li>
+  					</ul>
+  				</li>
+  			</ul>
+  		</li>
+  	</ul>
+  </span>
+
+  <span class="tree">
+  	<ul>
+  		<li>
+  			<a href="#">Mike Mojahed<br/>Founding Father</a>
+  			<ul>
+  				<li>
+  					<a href="#">Noah Baker - Johnson<br/>Founding Father</a>
+  					<ul>
+  						<li>
+  							<a href="#">Chris Ancona<br/>Beta Class</a>
+                <ul>
+                  <li>
+                    <a href="#">Vlad Tatomir<br/>Delta Class</a>
+                    <ul>
+                      <li>
+                        <a href="#">Armando Alvarez<br/>Zeta Class</a>
+                        <ul>
+                          <li>
+                            <a href="#">Stephan Schmidt<br/>Eta Class</a>
+                          </li>
+                          <li>
+                            <a href="#">Arjun Sawai<br/>Theta Class</a>
+                            <ul>
+                              <li>
+                                <a href="#">Zack Doiron<br/>Iota Class</a>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+  						</li>
+              <li>
+                <a href="#">Eddy Harris<br/>Delta Class</a>
+              </li>
+  					</ul>
+  				</li>
+  				<li>
+  					<a href="#">Riku Kaizaki<br/>Alpha Class</a>
+  				</li>
+  			</ul>
+  		</li>
+  	</ul>
+  </span>
+
+  <span class="tree">
+  	<ul>
+  		<li>
+  			<a href="#">Roger Americo Andrade<br/>Founding Father</a>
+  			<ul>
+  				<li>
+  					<a href="#">Zach Genirs<br/>Alpha Class</a>
+  					<ul>
+  						<li>
+  							<a href="#">Joe Stuart<br/>Gamma Class</a>
+                <ul>
+                  <li>
+                    <a href="#">Tom Fergus<br/>Zeta Class</a>
+                    <ul>
+                      <li>
+                        <a href="#">Micheal Gankin<br/>Eta Class</a>
+                      </li>
+                      <li>
+                        <a href="#">Tom Hayes<br/>Iota Class</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+  						</li>
+  					</ul>
+          </li>
+  				<li>
+  					<a href="#">Brady Grunewald<br/>Beta Class</a>
+            <ul>
+              <li>
+                <a href="#">Grayson McSwain<br/>Zeta Class</a>
+                <ul>
+                  <li>
+                    <a href="#">Brian Buckley<br/>Theta Class</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+  				</li>
+  			</ul>
+  		</li>
+  	</ul>
+  </span>
+
+  <span class="tree">
+  	<ul>
+  		<li>
+  			<a href="#">David Szczesny<br/>Founding Father</a>
+  			<ul>
+  				<li>
+  					<a href="#">Ned Geeslin<br/>Alpha Class</a>
+  				</li>
+          <li>
+            <a href="#">Marek Lasak <br/> Gamma Class</a>
+            <ul>
+              <li>
+                <a href="#">Quan Ho<br/>Eta Class</a>
+              </li>
+            </ul>
+          </li>
+  			</ul>
+  		</li>
+  	</ul>
+  </span>
+
+  <span class="tree">
+  	<ul>
+  		<li>
+  			<a href="#">Isaco Met<br/>Founding Father</a>
+  			<ul>
+  				<li>
+  					<a href="#">Aaron Furst<br/>Alpha Class</a>
+  				</li>
+  			</ul>
+  		</li>
+  	</ul>
+  </span>
+
+  <span class="tree">
+  	<ul>
+  		<li>
+  			<a href="#">Zack Botos<br/>Founding Father</a>
+  			<ul>
+  				<li>
+  					<a href="#">Joey Field<br/>Alpha Class</a>
+  					<ul>
+  						<li>
+  							<a href="#">Nathan Faynzilberg<br/>Delta Class</a>
+                <ul>
+                  <li>
+                    <a href="#">Kyle Smith<br/>Zeta Class</a>
+                    <ul>
+                      <li>
+                        <a href="#">Guillermo Alonzo<br/>Eta Class</a>
+                        <ul>
+                          <li>
+                            <a href="#">Sinan Zerbe<br/>Iota Class</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#">Ashburn Hu<br/>Theta Class</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+  						</li>
+  					</ul>
+  				</li>
+  			</ul>
+  		</li>
+  	</ul>
+  </span>
+</div>
+</div>
+<script src = "javascript\checkAuth.js"></script>
+
+</html>
